@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const config = require('./config');
 const users = require('./router/users');
 const places = require('./router/places');
+const ratings = require('./router/ratings');
 
 
 app.use(cors());
@@ -19,6 +20,7 @@ const run = async () =>{
 
     app.use('/users', users);
     app.use('/places', places);
+    app.use('/ratings', ratings);
 
     app.listen(port, () => {
         console.log(`Server start in PORT: ${port}`)
