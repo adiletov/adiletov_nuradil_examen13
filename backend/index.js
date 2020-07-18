@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const config = require('./config');
 const users = require('./router/users');
+const places = require('./router/places');
 
 
 app.use(cors());
@@ -15,7 +16,9 @@ app.use(express.static('public'));
 
 const run = async () =>{
     await mongoose.connect(config.database, config.options);
+
     app.use('/users', users);
+    app.use('/places', places);
 
     app.listen(port, () => {
         console.log(`Server start in PORT: ${port}`)
