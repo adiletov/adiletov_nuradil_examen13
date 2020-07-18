@@ -13,7 +13,6 @@ const calcRatings = (ratings, value) => {
 
 router.post('/', auth, async (req, res) => {
     const {qualityToFood, serviceQuality, interior, comment, placeId} = req.body;
-    const userRating = await Rating.findOne({placeId, userId: req.user._id});
 
     try {
         let ratingData = {

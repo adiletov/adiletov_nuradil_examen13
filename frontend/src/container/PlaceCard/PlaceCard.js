@@ -29,7 +29,7 @@ const PlaceCard = ({place, user}) => {
     return (
         <>
             <Card className={classes.root} >
-                <CardActionArea component={NavLink} to={'/place/' + place._id}>
+                <CardActionArea component={NavLink} to={'/place/' + place._id} id="card">
                     <CardMedia
                         className={classes.media}
                         image={apiURL + '/uploads/' + place.mainPicture}

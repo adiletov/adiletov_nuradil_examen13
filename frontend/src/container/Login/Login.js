@@ -52,7 +52,7 @@ class Login extends Component {
                                 />
                             </Grid>
                             <Grid item xs>
-                                <Button variant="contained" color="primary" type="submit" fullWidth>Login</Button>
+                                <Button variant="contained" id="login" color="primary" type="submit" fullWidth>Login</Button>
                             </Grid>
                         </form>
                     </Grid>

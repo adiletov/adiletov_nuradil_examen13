@@ -8,7 +8,7 @@ const RatingCard = ({name ,value, bool}) => {
         <div>
             <Box component="fieldset" mb={3} borderColor="transparent">
                 <Typography component="legend">{name}</Typography>
-                <Rating name="disabled" value={value || 0} disabled={bool}/>
+                <Rating name={name} value={value || 0} disabled={bool}/>
                 {value || 0}
             </Box>
         </div>

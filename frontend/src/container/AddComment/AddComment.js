@@ -92,12 +92,9 @@ class AddComment extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-
-});
 
 const mapDispatchToProps = dispatch => ({
     addRating: (ratingData) => dispatch(addRating(ratingData))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddComment);
+export default connect(null, mapDispatchToProps)(AddComment);

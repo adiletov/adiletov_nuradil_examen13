@@ -104,6 +104,7 @@ class AddPlace extends Component {
                                 <Typography>При посещении и использовании данного сайта,
                                     Вы согласны соблюдать следующие условия</Typography>
                                 <Checkbox
+                                    id="checkbox"
                                     checked={this.state.checkbox}
                                     onChange={this.checkboxChangeHandler}
                                     inputProps={{ 'aria-label': 'primary checkbox' }}

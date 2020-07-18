@@ -70,6 +70,9 @@ const Place = props => {
                             </Grid>)}
                     </Grid>
                 </Grid>
+                {user && user._id !== placeData.userId._id && <Grid item xs>
+                    <AddComment placeId={placeData._id}/>
+                </Grid>}
                 {
                     ratingPlace && <Grid item xs>
                         <RatingPlace rating={ratingPlace} id={placeData._id} user={user}/>
@@ -82,9 +85,7 @@ const Place = props => {
                 {user && user._id === placeData.userId._id && <Grid item xs>
                     <AddImages placeId={placeData._id}/>
                 </Grid>}
-                {user && user._id !== placeData.userId._id && <Grid item xs>
-                    <AddComment placeId={placeData._id}/>
-                </Grid>}
+
             </Grid>
             }
         </div>
