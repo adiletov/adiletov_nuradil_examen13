@@ -4,13 +4,17 @@ import {connectRouter, routerMiddleware} from "connected-react-router";
 import thunk from "redux-thunk";
 import {loadFromLocalStorage, saveToLocalStorage} from "./localStorage";
 import userReducer from "./reducer/userReducer";
+import placeReducer from "./reducer/placeReducer";
+import ratingReducer from "./reducer/ratingReducer";
 
 
 export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
     router: connectRouter(history),
-    users: userReducer
+    users: userReducer,
+    places : placeReducer,
+    ratings: ratingReducer
 });
 
 const middleware = [

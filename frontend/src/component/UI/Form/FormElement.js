@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import {TextField} from "@material-ui/core";
+import FileInput from "./FileInput";
+import Rating from "@material-ui/lab/Rating";
 
 const FormElement = props => {
     let inputComponent = <TextField
@@ -19,6 +21,21 @@ const FormElement = props => {
         rows={props.rows}
     />;
 
+    if (props.type === 'file') {
+        inputComponent = <FileInput
+            value={props.value}
+            onChange={props.onChange}
+            propertyName={props.propertyName}
+        />
+    }
+    if (props.propertyName === 'serviceQuality' || props.propertyName === 'qualityToFood' || props.propertyName === 'interior') {
+        inputComponent =
+            <Rating
+                name={props.propertyName}
+                value={props.value}
+                onChange={props.onChange}
+            />
+    }
 
 
 
